@@ -3,6 +3,7 @@
 -   [Introducción](#introducción)
 -   [Cómo usar este repositorio](#cómo-usar-este-repositorio)
 	-   [Usar los datos con R](#usar-los-datos-con-R)
+	-   [Diccionario de datos](#diccionario-de-datos)
 -   [Términos de Uso](#términos-de-uso)
 
 ## Introducción
@@ -82,6 +83,8 @@ R es un programa estadistico y computacional de fuente abierta (open-source soft
 * Una vez que se bajen los datos, se puede crear un gráfico con este código
 
 		plot()
+
+### Diccionario de datos
 
 ## Términos de Uso
 
