@@ -1,4 +1,4 @@
-# Coronavirus 2019 (COVID-19) del Ecuador
+# Coronavirus 2019 (COVID-19) Ecuador
 
 -   [Introducción](#introducción)
 -   [Cómo usar este repositorio](#cómo-usar-este-repositorio)
