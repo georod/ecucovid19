@@ -1,7 +1,7 @@
 # Coronavirus 2019 (COVID-19) del Ecuador
 
 -   [Introducción](#introducción)
--   [Cómo usar este repositorio](#óomo-usar-este-repositorio)
+-   [Cómo usar este repositorio](#cómo-usar-este-repositorio)
 	-   [Usar los datos con R](#usar-los-datos-con-R)
 -   [Términos de Uso](#términos-de-uso)
 
@@ -83,7 +83,7 @@ R es un programa estadistico y computacional de fuente abierta (open-source soft
 
 		plot()
 
-## Términos de Uso (Terms of Use)
+## Términos de Uso
 
 Este repositorio de GitHub y sus contenidos son de libre acceso. Los contenidos presentados aquí son provistos al público con fines educacionales y académicos. Los datos son tomados son de varias fuentes públicas y estas no siempre coinciden. La información presentada aquí no debe usarse para tomar decisiones médicas. Para información oficial referirse directamente al Ministerio de Salud Pública del Ecuador u otras fuentes gubernamentales.
 
