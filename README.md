@@ -86,6 +86,26 @@ R es un programa estadistico y computacional de fuente abierta (open-source soft
 
 ### Diccionario de datos
 
+|Variable|Descripción|
+|--------|-----------|
+|serial_id|Llave primaria, identificador único de fila|
+|fecha|fecha|                               
+|hora|Hora|                             
+|pos_acum|Positivos..acumulado.|               
+|neg_acum|Negativos..acumulado.|               
+|test_dia_acum|No..test.con.diagnóstico|            
+|casos_sosp|casos.con.sospecha|                  
+|fallecidos|Fallecidos|                          
+|fallecidos_prop|Fallecidos.probables|                
+|fallecidos_tot|Total.fallecidos|                    
+|n_mues_acum|No..muestras.tomadas..acumulado.|    
+|conf_sosp_desc|confirmados...sospecha...descartados|
+|pos_tasa|Tasa.positivos|                      
+|test_dia|Tests.con.diagnóstico|               
+|pos|Positivos|                           
+|por_inf|Porcentaje.infectados.por.día|       
+
+
 ## Términos de Uso
 
 Este repositorio de GitHub y sus contenidos son de libre acceso. Los contenidos presentados aquí son provistos al público con fines educacionales y académicos. Los datos son tomados son de varias fuentes públicas y estas no siempre coinciden. La información presentada aquí no debe usarse para tomar decisiones médicas. Para información oficial referirse directamente al Ministerio de Salud Pública del Ecuador u otras fuentes gubernamentales.
