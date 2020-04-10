@@ -1,9 +1,9 @@
 # Coronavirus 2019 (COVID-19) del Ecuador
 
--   [Introducción](#introduccion)
--   [Cómo usar este repositorio](#como-usar-este-repositorio)
+-   [Introducción](#introducción)
+-   [Cómo usar este repositorio](#óomo-usar-este-repositorio)
 	-   [Usar los datos con R](#usar-los-datos-con-R)
--   [Términos de Uso](#terminos-de-uso)
+-   [Términos de Uso](#términos-de-uso)
 
 ## Introducción
 Este repositorio contiene datos sobre Coronavirus (Covid-19) del Ecuador y código para realizar visualizaciones. Los datos son recopilados por Santigo Ron. Invitamos al público a contribuir libremente.
@@ -18,7 +18,7 @@ https://georod.rshinny.com/
 http://www.carto.com/
 <br><br>
 
-<b>Fuentes de datos (Data Sources):</b><br>
+<b>Fuentes de datos - por confirmar:</b><br>
 * Ministerio de Salud Pública del Ecuador, https://www.salud.gob.ec/ <br>
 * World Health Organization (WHO): https://www.who.int/ <br>
 * 1Point3Arces: https://coronavirus.1point3acres.com/en
@@ -34,14 +34,14 @@ http://www.carto.com/
 
 ## Cómo usar este repositorio?
 
-Los datos son inicialmente recopilados en Google Sheets. Una copia actualizada de estos datos es almacenada en un base de datos relacional creada con PostgreSQL. Para acceder a los datos en la base de datos (bd) se puede usar cualquier programa estadístico (R, Stata, Excel, etc.)  También se puede descargar los datos en formato CSV dando un click en el archivo ecu_covid19.csv arriba.
+Los datos son inicialmente recopilados por Santiago Ron en [Google Sheets](https://docs.google.com/spreadsheets/d/1Gq06oasFB5K9893qbDV0dcXR6SX5ZCAZva_J6uSkmcE/edit#gid=0). Una copia actualizada de estos datos es almacenada en un base de datos relacional creada con PostgreSQL. Para acceder a los datos en la base de datos (bd) se puede usar cualquier programa estadístico (R, Stata, Excel, etc.)  También se puede descargar los datos en formato CSV dando un click en el archivo ecu_covid19.csv que se encuentra en la carperta <b>data</b> arriba.
 
 Los parámetros para conectarse son:
 
   - IP: 99.225.128.160
   - Puerto: 5432
   - Base de datos: covid19
-  - Usuario: usuario_pub
+  - Usuario: pubu
   - Clave: covid19
   
 Hasta el momento solo existe una tabla en la bd (ecu_covid19). Aquí mostramos como usar los datos usando R.
@@ -60,7 +60,7 @@ R es un programa estadistico y computacional de fuente abierta (open-source soft
 * Connectarse a (y desconectarse de) la bd
     
 		# crear conección a la bd
-        con <- DBI::dbConnect(drv = RPostgres::Postgres(),user='usuario_pub',password='covid19',host='99.225.128.160',port=5432,dbname='covid19')
+        con <- DBI::dbConnect(drv = RPostgres::Postgres(),user='pubu',password='Covid19',host='99.225.128.160',port=5432,dbname='covid19')
 
 		# pedir a la bd la tabla con los datos
 		res <- dbSendQuery(con, "SELECT * FROM ecu_covid19")
