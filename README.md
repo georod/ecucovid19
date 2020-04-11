@@ -79,6 +79,9 @@ R es un programa estadistico y computacional de fuente abierta (open-source soft
 
 		# ver primeras 6 observations de la tabla
 		head(cv19)
+		
+		# ver últimas 6 observations de la tabla
+		head(cv19)
 
 		# borrar objeto res con consulta realizada a la bd
 		dbClearResult(res)
@@ -89,7 +92,16 @@ R es un programa estadistico y computacional de fuente abierta (open-source soft
 
 * Una vez que se bajen los datos, se puede crear un gráfico con este código
 
-		plot()
+		# El primer gráfico de Santiago Ron usando R 
+		# instalar librería
+		install.packages("ggplot2")
+		# Cargar librería
+		library(ggplot2)
+		# Crear gráfico
+		ggplot(data=cv19[!is.na(cv19$por_inf),], aes(x=fecha, y=por_inf)) + 
+		  geom_bar(stat="identity") + xlab("Fecha") + ylab("Porcentaje de infectados") +  
+		  ggtitle("Porcentaje de infectados por día") + 
+		  geom_text(aes(x = fecha, y = por_inf + 2.5, label = round(por_inf , 0))) + guides(fill=FALSE) 
 
 ### Diccionario de datos
 
