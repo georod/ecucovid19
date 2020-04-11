@@ -39,16 +39,23 @@ Los datos son inicialmente recopilados por Santiago Ron en [Google Sheets](https
 
 Los parámetros para conectarse son:
 
-  - IP: 99.225.128.160
+  - IP: 66.198.240.224
   - Puerto: 5432
-  - Base de datos: covid19
-  - Usuario: pubu
-  - Clave: covid19
+  - Base de datos: georodco_covid19
+  - Usuario: georodco_pubu
+  - Clave: Covid19Ecuador
   
-Hasta el momento solo existe una tabla en la bd (ecu_covid19). Aquí mostramos como usar los datos usando R.
+Hasta el momento existen estos datos,
+
+|Nombre en bd|Descripción|Fuente|
+|--------|-----------|-----------|
+|ecu_covid19|Datos de Covid19 por día a nivel nacional|Santiago Ron|
+
+
+Aq mostramos como usar los datos usando R.
 
 ### Usar los datos con R
-R es un programa estadistico y computacional de fuente abierta (open-source software).  Se lo puede bajar aqu
+R es un programa estadistico y computacional de fuente abierta (open-source software).  Se lo puede bajar aqui ([R-project](https://www.r-project.org/))
 
 * Intalar librerías de R
 
@@ -61,9 +68,9 @@ R es un programa estadistico y computacional de fuente abierta (open-source soft
 * Connectarse a (y desconectarse de) la bd
     
 		# crear conección a la bd
-        con <- DBI::dbConnect(drv = RPostgres::Postgres(),user='pubu',password='Covid19',host='99.225.128.160',port=5432,dbname='covid19')
+        con <- DBI::dbConnect(drv = RPostgres::Postgres(),user='georodco_pubu',password='Covid19Ecuador',host='66.198.240.224',port=5432,dbname='georodco_covid19')
 
-		# pedir a la bd la tabla con los datos
+		# pedir a la bd la tabla ecu_covid19
 		res <- dbSendQuery(con, "SELECT * FROM ecu_covid19")
 		cv19 <- dbFetch(res)
 		
@@ -86,24 +93,27 @@ R es un programa estadistico y computacional de fuente abierta (open-source soft
 
 ### Diccionario de datos
 
-|Variable|Descripción|
-|--------|-----------|
-|serial_id|Llave primaria, identificador único de fila|
-|fecha|fecha|                               
-|hora|Hora|                             
-|pos_acum|Positivos..acumulado.|               
-|neg_acum|Negativos..acumulado.|               
-|test_dia_acum|No..test.con.diagnóstico|            
-|casos_sosp|casos.con.sospecha|                  
-|fallecidos|Fallecidos|                          
-|fallecidos_prop|Fallecidos.probables|                
-|fallecidos_tot|Total.fallecidos|                    
-|n_mues_acum|No..muestras.tomadas..acumulado.|    
-|conf_sosp_desc|confirmados...sospecha...descartados|
-|pos_tasa|Tasa.positivos|                      
-|test_dia|Tests.con.diagnóstico|               
-|pos|Positivos|                           
-|por_inf|Porcentaje.infectados.por.día|       
+|Variable|Descripción|Description|
+|--------|-----------|-----------|
+|serial_id|Llave primaria, identificador único de fila|Primary Key|
+|fecha|Fecha en formato YYYY-MM-DD|Date in YYYY-MM-DD|
+|hora|hora de ingreso del registro|Time record was entered|
+|pos_acum|Positivos..acumulado.|Cummulative positive cases|
+|neg_acum|Negativos..acumulado.|Cummulative negative cases|
+|test_dia_acum|No..test.con.diagnóstico|Number of tests with diagnosis|
+|casos_sosp|casos.con.sospecha|Suspect cases|
+|fallecidos|Fallecidos|Deaths|
+|fallecidos_prop|Fallecidos.probables|Probable deaths|
+|fallecidos_tot|Total.fallecidos|Total deaths|
+|n_mues_acum|No..muestras.tomadas..acumulado.|Cummulative number of tests taken|
+|conf_sosp_desc|confirmados...sospecha...descartados|Sum of positive, suspect and negative cases|
+|pos_tasa|Tasa.positivos|Positive cases rate|
+|test_dia|Tests.con.diagnóstico|Number of tests with diagnosis|
+|pos|Positivos|Positive cases|
+|por_inf|Porcentaje.infectados.por.día|Percent of infected people in a day|
+|cont|Contag|Infected|
+|por_pob|X..poblacion|Percent of population infected|
+|n_est|No..esimado.f|Estimated number of infected people|
 
 
 ## Términos de Uso
