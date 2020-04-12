@@ -7,7 +7,7 @@
 -   [Términos de Uso](#términos-de-uso)
 
 ## Introducción
-Este repositorio contiene datos sobre Coronavirus (Covid-19) del Ecuador y código para realizar visualizaciones. Los datos son recopilados por Santigo Ron. Invitamos al público a contribuir libremente.
+Este repositorio contiene datos sobre Coronavirus (Covid-19) del Ecuador y código para realizar visualizaciones. Invitamos al público a contribuir libremente a este repositorio.
 
 
 <br>
@@ -15,13 +15,13 @@ Este repositorio contiene datos sobre Coronavirus (Covid-19) del Ecuador y códi
 <b>Panel de datos (Dashboard) - por hacer:</b><br>
 https://georod.rshinny.com/
 <br><br>
-<b>Mapa interactivo - por hacer:</b><br>
+<b>Mapa interactivo - por hacer cuando tengamos datos provinciales/cantonales:</b><br>
 http://www.carto.com/
 <br><br>
 
 <b>Fuentes de datos - por confirmar:</b><br>
-* Ministerio de Salud Pública del Ecuador, https://www.salud.gob.ec/ <br>
-* World Health Organization (WHO): https://www.who.int/ <br>
+* Santiago Ron (PUCE), ha recopilado datos del Ministerio de [Salud Pública del Ecuador](https://www.salud.gob.ec/) y otras fuentes<br>
+* [John Hopinks CSSE](https://github.com/CSSEGISandData/COVID-19)
 * 1Point3Arces: https://coronavirus.1point3acres.com/en
 * WorldoMeters: https://www.worldometers.info/coronavirus/
 * Coronavirus App: https://coronavirus.app/
@@ -47,15 +47,23 @@ Los parámetros para conectarse son:
   
 Hasta el momento existen estos datos,
 
-|Nombre en bd|Descripción|Fuente|
+|Nombre de tabla en bd|Descripción|Fuente|
 |--------|-----------|-----------|
 |ecu_covid19|Datos de Covid19 por día a nivel nacional|Santiago Ron|
+|jh_ts_covid19_deaths_ecu|Muertes por Covid19 por día (solo Ecuador) a nivel nacional|John Hopkins CSSE|
+|jh_ts_covid19_confirmed_ecu|Casos confirmados de Covid19 por día (solo Ecuador) a nivel nacional|John Hopkins CSSE|
+|jh_ts_covid19_recovered_ecu|Casos recuperados de Covid19 por día (solo Ecuador) a nivel nacional|John Hopkins CSSE|
+
+  - Los datos de la tabla ecu_covid19 son inicialmente recopilados por Santiago Ron en [Google Sheets](https://docs.google.com/spreadsheets/d/1Gq06oasFB5K9893qbDV0dcXR6SX5ZCAZva_J6uSkmcE/edit#gid=0). Una copia actualizada de estos datos es almacenada en una base de datos relacional creada con PostgreSQL. 
+  - Los datos de las tablas de John Hopkins son distribuidos libremente al público. Los datos disponibles en la bd han sido transformados para mostrar la fecha en una sola columna (tabla larga no ancha como es la original). 
+
+Para acceder a los datos en la base de datos (bd) se puede usar cualquier programa estadístico (R, Stata, Excel, etc.)  También se puede descargar los datos en formato CSV dando un click en los archivos dentro de la carperta <b>data</b> arriba.
 
 
 Aq mostramos como usar los datos usando R.
 
 ### Usar los datos con R
-R es un programa estadistico y computacional de fuente abierta (open-source software).  Se lo puede bajar aqui ([R-project](https://www.r-project.org/))
+R es un programa estadístico y computacional de fuente abierta (open-source software).  Se lo puede bajar aquí ([R-project](https://www.r-project.org/))
 
 * Intalar librerías de R
 
@@ -83,6 +91,10 @@ R es un programa estadistico y computacional de fuente abierta (open-source soft
 		# ver últimas 6 observations de la tabla
 		head(cv19)
 
+		# pedir a la bd una de las tablas de John Hopkins
+		res <- dbSendQuery(con, "SELECT * FROM jh_ts_covid19_deaths_ecu")
+		jh_cv19 <- dbFetch(res)
+		
 		# borrar objeto res con consulta realizada a la bd
 		dbClearResult(res)
 
@@ -104,6 +116,8 @@ R es un programa estadistico y computacional de fuente abierta (open-source soft
 		  geom_text(aes(x = fecha, y = por_inf + 2.5, label = round(por_inf , 0))) + guides(fill=FALSE) 
 
 ### Diccionario de datos
+
+* Tabla: ecu_covid19
 
 |Variable|Descripción|Description|
 |--------|-----------|-----------|
@@ -127,6 +141,18 @@ R es un programa estadistico y computacional de fuente abierta (open-source soft
 |por_pob|X..poblacion|Percent of population infected|
 |n_est|No..esimado.f|Estimated number of infected people|
 
+
+* Tabla: jh_ts_covid19_confirmed_ecu, jh_ts_covid19_deaths_ecu, jh_ts_covid19_recovered_ecu, 
+
+|Variable|Descripción|Description|
+|--------|-----------|-----------|
+|serial_id|Llave primaria, identificador único de fila|Primary Key|
+|province_state|Provincia o estado|Province or state|
+|country_region|País o región|Country or region|
+|lat|latitud|latitude|
+|lon|longitud|longitude|
+|fecha1|Fecha en formato YYYY-MM-DD|Date in YYYY-MM-DD|
+|value1|Casos confirmados, fallecidos o recuperados dependiendo de la tabla|Confirmed cases, deaths or recovered depending on the table|
 
 ## Términos de Uso
 
