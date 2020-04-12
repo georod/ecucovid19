@@ -29,7 +29,7 @@ http://www.carto.com/
 <br>
 
 <b>Contáctanos: </b><br>
-* Email: rons@gmail.com?, p.rodriguez97@gmail.com
+* Email: rons@gmail.com, p.rodriguez97@gmail.com
 <br><br>
 
 
@@ -140,7 +140,7 @@ R es un programa estadístico y computacional de fuente abierta (open-source sof
 |n_est|No..esimado.f|Estimated number of infected people|
 
 
-* Tabla: jh_ts_covid19_confirmed_ecu, jh_ts_covid19_deaths_ecu, jh_ts_covid19_recovered_ecu, 
+* Tabla: jh_ts_covid19_confirmed_ecu, jh_ts_covid19_deaths_ecu, jh_ts_covid19_recovered_ecu 
 
 |Variable|Descripción|Description|
 |--------|-----------|-----------|
