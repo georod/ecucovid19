@@ -19,17 +19,16 @@ https://georod.rshinny.com/
 http://www.carto.com/
 <br><br>
 
-<b>Fuentes de datos - por hacer/confirmar:</b><br>
+<b>Fuentes de datos:</b><br>
 * Santiago Ron (PUCE), ha recopilado datos del Ministerio de [Salud Pública del Ecuador](https://www.salud.gob.ec/) y otras fuentes<br>
 * [John Hopinks CSSE](https://github.com/CSSEGISandData/COVID-19)
-* 1Point3Arces: https://coronavirus.1point3acres.com/en
-* WorldoMeters: https://www.worldometers.info/coronavirus/
-* Coronavirus App: https://coronavirus.app/
+
 
 <br>
 
 <b>Contáctanos: </b><br>
-* Email: rons@gmail.com, p.rodriguez97@gmail.com
+* Santiago Ron: santiago.r.ron@gmail.com, @santiak
+* Peter Rodríguez: p.rodriguez97@gmail.com, @psrod97
 <br><br>
 
 
