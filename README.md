@@ -7,7 +7,7 @@
 -   [Términos de Uso](#términos-de-uso)
 
 ## Introducción
-Este repositorio contiene datos sobre Coronavirus (Covid-19) del Ecuador y código para realizar visualizaciones. Invitamos al público a contribuir libremente a este repositorio.
+Este repositorio contiene datos sobre Coronavirus (Covid-19) del Ecuador de varias fuentes y código para realizar visualizaciones. Invitamos al público a contribuir libremente a este repositorio.
 
 
 <br>
@@ -19,7 +19,7 @@ https://georod.rshinny.com/
 http://www.carto.com/
 <br><br>
 
-<b>Fuentes de datos - por confirmar:</b><br>
+<b>Fuentes de datos - por hacer/confirmar:</b><br>
 * Santiago Ron (PUCE), ha recopilado datos del Ministerio de [Salud Pública del Ecuador](https://www.salud.gob.ec/) y otras fuentes<br>
 * [John Hopinks CSSE](https://github.com/CSSEGISandData/COVID-19)
 * 1Point3Arces: https://coronavirus.1point3acres.com/en
@@ -29,15 +29,15 @@ http://www.carto.com/
 <br>
 
 <b>Contáctanos: </b><br>
-* Email: rons@gmail.com, p.rodriguez97@gmail.com
+* Email: rons@gmail.com?, p.rodriguez97@gmail.com
 <br><br>
 
 
 ## Cómo usar este repositorio?
 
-Los datos son inicialmente recopilados por Santiago Ron en [Google Sheets](https://docs.google.com/spreadsheets/d/1Gq06oasFB5K9893qbDV0dcXR6SX5ZCAZva_J6uSkmcE/edit#gid=0). Una copia actualizada de estos datos es almacenada en un base de datos relacional creada con PostgreSQL. Para acceder a los datos en la base de datos (bd) se puede usar cualquier programa estadístico (R, Stata, Excel, etc.)  También se puede descargar los datos en formato CSV dando un click en el archivo ecu_covid19.csv que se encuentra en la carperta <b>data</b> arriba.
+Los datos presentados aquí se pueden acceder por dos métodos. Primero, usuarios pueden conectarse directamente a la base de datos relacional ([PostgreSQL](https://www.postgresql.org/)) usando cualquier programa estadístico (R, Stata, Excel, etc.) Segundo, pueden descargar los datos en formato CSV dando un click en los archivos que se encuentran en la carperta <b>data</b> arriba.
 
-Los parámetros para conectarse son:
+Los parámetros para a la bd conectarse son:
 
   - IP: 66.198.240.224
   - Puerto: 5432
@@ -54,13 +54,11 @@ Hasta el momento existen estos datos,
 |jh_ts_covid19_confirmed_ecu|Casos confirmados de Covid19 por día (solo Ecuador) a nivel nacional|John Hopkins CSSE|
 |jh_ts_covid19_recovered_ecu|Casos recuperados de Covid19 por día (solo Ecuador) a nivel nacional|John Hopkins CSSE|
 
-  - Los datos de la tabla ecu_covid19 son inicialmente recopilados por Santiago Ron en [Google Sheets](https://docs.google.com/spreadsheets/d/1Gq06oasFB5K9893qbDV0dcXR6SX5ZCAZva_J6uSkmcE/edit#gid=0). Una copia actualizada de estos datos es almacenada en una base de datos relacional creada con PostgreSQL. 
-  - Los datos de las tablas de John Hopkins son distribuidos libremente al público. Los datos disponibles en la bd han sido transformados para mostrar la fecha en una sola columna (tabla larga no ancha como es la original). 
-
-Para acceder a los datos en la base de datos (bd) se puede usar cualquier programa estadístico (R, Stata, Excel, etc.)  También se puede descargar los datos en formato CSV dando un click en los archivos dentro de la carperta <b>data</b> arriba.
+  - Los datos de la tabla ecu_covid19 son inicialmente recopilados por Santiago Ron en [Google Sheets](https://docs.google.com/spreadsheets/d/1Gq06oasFB5K9893qbDV0dcXR6SX5ZCAZva_J6uSkmcE/edit#gid=0). Una copia actualizada de estos datos es almacenada en una base de datos (bd) relacional. 
+  - Los datos de las tablas de John Hopkins CSSE son distribuidos libremente al público. Los datos disponibles en la bd han sido transformados para mostrar la fecha en una sola columna (tabla larga no ancha como la original). 
 
 
-Aq mostramos como usar los datos usando R.
+Abajo mostramos como usar los datos usando R.
 
 ### Usar los datos con R
 R es un programa estadístico y computacional de fuente abierta (open-source software).  Se lo puede bajar aquí ([R-project](https://www.r-project.org/))
@@ -156,5 +154,5 @@ R es un programa estadístico y computacional de fuente abierta (open-source sof
 
 ## Términos de Uso
 
-Este repositorio de GitHub y sus contenidos son de libre acceso. Los contenidos presentados aquí son provistos al público con fines educacionales y académicos. Los datos son tomados son de varias fuentes públicas y estas no siempre coinciden. La información presentada aquí no debe usarse para tomar decisiones médicas. Para información oficial referirse directamente al Ministerio de Salud Pública del Ecuador u otras fuentes gubernamentales.
+Este repositorio de GitHub y sus contenidos son de libre acceso. Los contenidos presentados aquí son proporcionados al público con fines educacionales y académicos. Los datos son tomados son de varias fuentes públicas y estas no siempre coinciden. La información presentada aquí no debe usarse para tomar decisiones médicas. Para información oficial referirse directamente al Ministerio de Salud Pública del Ecuador u otras fuentes gubernamentales.
 
