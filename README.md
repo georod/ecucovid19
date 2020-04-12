@@ -20,13 +20,19 @@ http://www.carto.com/
 <br><br>
 
 <b>Fuentes de datos:</b><br>
-* Santiago Ron (PUCE), ha recopilado datos del Ministerio de [Salud Pública del Ecuador](https://www.salud.gob.ec/) y otras fuentes<br>
+* Santiago Ron (PUCE), ha recopilado datos del [Ministerio de Salud Pública del Ecuador (MSPE)](https://www.salud.gob.ec/) y otras fuentes. Sus datos tambien contienen varias medidas derivadas.<br>
 * [John Hopinks CSSE](https://github.com/CSSEGISandData/COVID-19)
 
+<b>Otras iniciativas similares:</b><br>
+
+* [Andres N. Robalino](https://github.com/andrab/ecuacovid), @andras_io: Proporciona en GitHub muertes y casos positivos de los informes del Servicio Nacional de Gestión de Riesgos y Emergencias del Ecuador (SNGRE). Andrés proporciona datos crudos y con código de INEC provincial/cantonal. Excelente trabjo Andrés.
+* [Pablo Reyes](https://github.com/pablora19/COVID19_EC), @PabloRA19: Proporciona en GitHub varias tablas importantes. Sus fuentes son la SNGRE (@riesgos_ec) pero con algunas correcciones importantes. (Ver cuenta de Pablo en Twitter.) 
+
+Por otro lado, Ugo Rivera (@ugo_r_b): compartió por Twitter un archivo [Google Sheets](https://docs.google.com/spreadsheets/d/1ZTXvIqq23cnmN-A8Fikyo6C_6jI3xYPE1Mff9fZOgHc/edit#gid=0) que parecer ser de la SNGRE. Este archivo tiene tablas similares a las de Pablo Reyes.
 
 <br>
 
-<b>Contáctanos: </b><br>
+<b>Contáctos: </b><br>
 * Santiago Ron: santiago.r.ron@gmail.com, @santiak
 * Peter Rodríguez: p.rodriguez97@gmail.com, @psrod97
 <br><br>
@@ -44,7 +50,7 @@ Los parámetros para a la bd conectarse son:
   - Usuario: georodco_pubu
   - Clave: Covid19Ecuador
   
-Hasta el momento existen estos datos,
+Hasta el momento existen estos datos en la bd,
 
 |Nombre de tabla en bd|Descripción|Fuente|
 |--------|-----------|-----------|
