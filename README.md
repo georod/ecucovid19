@@ -135,6 +135,7 @@ R es un programa estadístico y computacional de fuente abierta (open-source sof
 |fallecidos|Fallecidos|Deaths|
 |fallecidos_prop|Fallecidos.probables|Probable deaths|
 |fallecidos_tot|Total.fallecidos|Total deaths|
+|fallecidos_pmill|Total fallecidos por million de personas| Total deaths per million people|
 |n_mues_acum|No..muestras.tomadas..acumulado.|Cummulative number of tests taken|
 |conf_sosp_desc|confirmados...sospecha...descartados|Sum of positive, suspect and negative cases|
 |pos_tasa|Tasa.positivos|Positive cases rate|
