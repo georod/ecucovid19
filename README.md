@@ -15,8 +15,9 @@ Este repositorio contiene datos sobre Coronavirus (Covid-19) del Ecuador de vari
 <b>Panel de datos (Dashboard) - por hacer:</b><br>
 https://georod.rshinny.com/
 <br><br>
-<b>Mapa interactivo - por hacer cuando tengamos datos provinciales/cantonales:</b><br>
-http://www.carto.com/
+<b>Mapas interactivos:</b><br>
+* [Días con fallecidos por COVID-19](https://georod.carto.com/builder/0e64800d-4993-4083-b65a-2ca5f45cf30c/embed): Con datos de [Andres N. Robalino](https://github.com/andrab/ecuacovid) se creó un mapa espacio-temporal que muestra días con fallecidos por provincia. Los puntos representan provincias (sus capitales) donde hubo más de 3 fallecidos a causa del COVID-19 en un día.  Este mapa permite ver la distribución geográfica y temporal de las muertes por COVID-19 en el Ecuador.  Se usó la plataforma [Carto](https://carto.com/) para crear este mapa.
+
 <br><br>
 
 <b>Fuentes de datos:</b><br>
