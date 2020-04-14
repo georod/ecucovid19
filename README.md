@@ -1,26 +1,18 @@
 # Coronavirus 2019 (COVID-19) Ecuador
 
 -   [Introducción](#introducción)
--   [Cómo usar este repositorio](#cómo-usar-este-repositorio)
+-	[Cómo usar este repositorio](#cómo-usar-este-repositorio)
 	-   [Usar los datos con R](#usar-los-datos-con-R)
 	-   [Diccionario de datos](#diccionario-de-datos)
+-	[Visualizaciones](#visualizaciones)
 -   [Términos de Uso](#términos-de-uso)
 
 ## Introducción
 Este repositorio contiene datos sobre Coronavirus (Covid-19) del Ecuador de varias fuentes y código para realizar visualizaciones. Invitamos al público a contribuir libremente a este repositorio.
 
-
 <br>
 
-<b>Panel de datos (Dashboard) - por hacer:</b><br>
-https://georod.rshinny.com/
-<br><br>
-<b>Mapas interactivos:</b><br>
-* [Días con fallecidos por COVID-19](https://georod.carto.com/builder/0e64800d-4993-4083-b65a-2ca5f45cf30c/embed): Con datos de [Andres N. Robalino](https://github.com/andrab/ecuacovid) se creó un mapa espacio-temporal que muestra días con fallecidos por provincia. Los puntos representan provincias (sus capitales) donde hubo más de 3 fallecidos a causa del COVID-19 en un día.  Este mapa permite ver la distribución geográfica y temporal de las muertes por COVID-19 en el Ecuador.  Se usó la plataforma [Carto](https://carto.com/) para crear este mapa.
-
-<br><br>
-
-<b>Fuentes de datos:</b><br>
+<b>Fuentes de datos de este repositorio:</b><br>
 * Santiago Ron (PUCE), ha recopilado datos del [Ministerio de Salud Pública del Ecuador (MSPE)](https://www.salud.gob.ec/) y otras fuentes. Sus datos tambien contienen varias medidas derivadas.<br>
 * [John Hopinks CSSE](https://github.com/CSSEGISandData/COVID-19)
 
@@ -125,26 +117,27 @@ R es un programa estadístico y computacional de fuente abierta (open-source sof
 
 |Variable|Descripción|Description|
 |--------|-----------|-----------|
-|serial_id|Llave primaria, identificador único de fila|Primary Key|
+|serial_id|Llave primaria|Primary Key|
 |fecha|Fecha en formato YYYY-MM-DD|Date in YYYY-MM-DD|
 |hora|hora de ingreso del registro|Time record was entered|
 |pos_acum|Positivos..acumulado.|Cummulative positive cases|
 |neg_acum|Negativos..acumulado.|Cummulative negative cases|
 |test_dia_acum|No..test.con.diagnóstico|Number of tests with diagnosis|
 |casos_sosp|casos.con.sospecha|Suspect cases|
-|fallecidos|Fallecidos|Deaths|
+|fallecidos|Fallecidos.con.test|Deaths|
 |fallecidos_prop|Fallecidos.probables|Probable deaths|
 |fallecidos_tot|Total.fallecidos|Total deaths|
-|fallecidos_pmill|Total fallecidos por million de personas| Total deaths per million people|
+|fallecidos_pmill|Fallecidos.millón|Total deaths per million|
 |n_mues_acum|No..muestras.tomadas..acumulado.|Cummulative number of tests taken|
 |conf_sosp_desc|confirmados...sospecha...descartados|Sum of positive, suspect and negative cases|
-|pos_tasa|Tasa.positivos|Positive cases rate|
+|pos_tasa|X|Positive cases rate|
 |test_dia|Tests.con.diagnóstico|Number of tests with diagnosis|
 |pos|Positivos|Positive cases|
 |por_inf|Porcentaje.infectados.por.día|Percent of infected people in a day|
-|cont|Contag|Infected|
-|por_pob|X..poblacion|Percent of population infected|
+|cont|Cont|Infected|
+|por_pob|X.|Percent of population infected|
 |n_est|No..esimado.f|Estimated number of infected people|
+|fallecidos_nue|Nuevos.fallecidos|New deaths|
 
 
 * Tabla: jh_ts_covid19_confirmed_ecu, jh_ts_covid19_deaths_ecu, jh_ts_covid19_recovered_ecu 
@@ -158,6 +151,12 @@ R es un programa estadístico y computacional de fuente abierta (open-source sof
 |lon|longitud|longitude|
 |fecha1|Fecha en formato YYYY-MM-DD|Date in YYYY-MM-DD|
 |value1|Casos confirmados, fallecidos o recuperados dependiendo de la tabla|Confirmed cases, deaths or recovered depending on the table|
+
+<br>
+## Visualizaciones
+<b>Mapas interactivos:</b><br>
+* [Días con fallecidos por COVID-19](https://georod.carto.com/builder/0e64800d-4993-4083-b65a-2ca5f45cf30c/embed): Con datos de [Andres N. Robalino](https://github.com/andrab/ecuacovid) se creó un mapa espacio-temporal que muestra días con fallecidos por provincia. Los puntos representan provincias (sus capitales) donde hubo más de 3 fallecidos a causa del COVID-19 en un día.  Este mapa permite ver la distribución geográfica y temporal de las muertes por COVID-19 en el Ecuador.  Se usó la plataforma [Carto](https://carto.com/) para crear este mapa.
+
 
 ## Términos de Uso
 
