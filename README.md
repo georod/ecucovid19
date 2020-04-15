@@ -64,7 +64,7 @@ R es un programa estadístico y computacional de fuente abierta (open-source sof
 * Intalar librerías de R
 
 
-		install.packages("RDBI")
+		install.packages("DBI")
 		install.packages("RPostgreSQL")
 
 
