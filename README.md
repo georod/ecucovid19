@@ -152,9 +152,10 @@ R es un programa estadístico y computacional de fuente abierta (open-source sof
 |fecha1|Fecha en formato YYYY-MM-DD|Date in YYYY-MM-DD|
 |value1|Casos confirmados, fallecidos o recuperados dependiendo de la tabla|Confirmed cases, deaths or recovered depending on the table|
 
-<br>
+
 ## Visualizaciones
-<b>Mapas interactivos:</b><br>
+
+### Mapas interactivos
 * [Días con fallecidos por COVID-19](https://georod.carto.com/builder/0e64800d-4993-4083-b65a-2ca5f45cf30c/embed): Con datos de [Andres N. Robalino](https://github.com/andrab/ecuacovid) se creó un mapa espacio-temporal que muestra días con fallecidos por provincia. Los puntos representan provincias (sus capitales) donde hubo más de 3 fallecidos a causa del COVID-19 en un día.  Este mapa permite ver la distribución geográfica y temporal de las muertes por COVID-19 en el Ecuador.  Se usó la plataforma [Carto](https://carto.com/) para crear este mapa.
 
 
