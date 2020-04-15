@@ -61,11 +61,16 @@ Abajo mostramos como usar los datos usando R.
 ### Usar los datos con R
 R es un programa estadístico y computacional de fuente abierta (open-source software).  Se lo puede bajar aquí ([R-project](https://www.r-project.org/))
 
-* Intalar librerías de R
+* Instalar y cargar librerías de R
 
 
+		#Solo se necesita instalar las librerias una vez
 		install.packages("DBI")
-		install.packages("RPostgreSQL")
+		install.packages("RPostgreSQL") # opcional
+		
+		# Cargar librería
+		library(DBI)
+		library(RPostgreSQL) # opcional
 
 
 
@@ -91,6 +96,9 @@ R es un programa estadístico y computacional de fuente abierta (open-source sof
 		res <- dbSendQuery(con, "SELECT * FROM jh_ts_covid19_deaths_ecu")
 		jh_cv19 <- dbFetch(res)
 		
+		# ver últimas 6 observations de la tabla
+		head(jh_cv19)
+		
 		# borrar objeto res con consulta realizada a la bd
 		dbClearResult(res)
 
@@ -105,11 +113,17 @@ R es un programa estadístico y computacional de fuente abierta (open-source sof
 		install.packages("ggplot2")
 		# Cargar librería
 		library(ggplot2)
-		# Crear gráfico
-		ggplot(data=cv19[!is.na(cv19$por_inf),], aes(x=fecha, y=por_inf)) + 
-		  geom_bar(stat="identity") + xlab("Fecha") + ylab("Porcentaje de infectados") +  
-		  ggtitle("Porcentaje de infectados por día") + 
-		  geom_text(aes(x = fecha, y = por_inf + 2.5, label = round(por_inf , 0))) + guides(fill=FALSE) 
+		# Crear gráfico de barras
+		ggplot2::ggplot(data=cv19[!is.na(cv19$por_inf),], aes(x=fecha, y=por_inf)) + 
+			geom_bar(stat="identity") + xlab("Fecha") + ylab("Porcentaje de infectados") +  
+			ggtitle("Porcentaje de infectados de COVID-19 en el Ecuador por día") + 
+			geom_text(aes(x = fecha, y = por_inf + 2.5, label = round(por_inf , 0))) + 
+			labs(caption="Fuente: Santiago Ron, @santiak")
+		  
+		#Crear gráfico de líneas usando datos de John hopkins (número de fallecidos)
+		# gráfico con datos de John Hopkins
+		ggplot2::ggplot(data=jh_cv19[jh_cv19$date1>"2020-03-28",], aes(x=date1, y=value1)) + 
+			geom_line( color="red", size=1, stat="identity") + labs(title = "Número de fallecidos por COVID-19 en el Ecuador por día", caption = "Fuente: John Hopkins CSSE", x = "Fecha", y = "Número de fallecidos")
 
 ### Diccionario de datos
 
