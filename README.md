@@ -55,6 +55,8 @@ Hasta el momento existen estos datos en la bd,
   - Los datos de la tabla ecu_covid19 son inicialmente recopilados por Santiago Ron en [Google Sheets](https://docs.google.com/spreadsheets/d/1Gq06oasFB5K9893qbDV0dcXR6SX5ZCAZva_J6uSkmcE/edit#gid=0). Una copia actualizada de estos datos es almacenada en una base de datos (bd) relacional. 
   - Los datos de las tablas de John Hopkins CSSE son distribuidos libremente al público. Los datos disponibles en la bd han sido transformados para mostrar la fecha en una sola columna (tabla larga no ancha como la original). 
 
+Nota: los datos son actualizados cada dos días. En la carpeta data/archive encontrará versiones antiguas de los datos. Usualmente, los datos de esta carpeta tienen una estructura diferente de los actuales. Por ejemplo, puede ver nuevas variables o nuevos nombres de variables.
+
 
 Abajo mostramos como usar los datos usando R.
 
@@ -136,22 +138,29 @@ R es un programa estadístico y computacional de fuente abierta (open-source sof
 |hora|hora de ingreso del registro|Time record was entered|
 |pos_acum|Positivos..acumulado.|Cummulative positive cases|
 |neg_acum|Negativos..acumulado.|Cummulative negative cases|
-|test_dia_acum|No..test.con.diagnóstico|Number of tests with diagnosis|
+|test_diag_acum|No..test.con.diagnóstico|Cummulative number of tests with diagnosis|
 |casos_sosp|casos.con.sospecha|Suspect cases|
-|fallecidos|Fallecidos.con.test|Deaths|
-|fallecidos_prop|Fallecidos.probables|Probable deaths|
+|fallecidos_acum|Fallecidos.con.test|Cummulativ deaths|
+|fallecidos_prob_acum|Fallecidos.probables.acumulado|Cummulative probable deaths|
 |fallecidos_tot|Total.fallecidos|Total deaths|
 |fallecidos_pmill|Fallecidos.millón|Total deaths per million|
 |n_mues_acum|No..muestras.tomadas..acumulado.|Cummulative number of tests taken|
 |conf_sosp_desc|confirmados...sospecha...descartados|Sum of positive, suspect and negative cases|
-|pos_tasa|X|Positive cases rate|
-|test_dia|Tests.con.diagnóstico|Number of tests with diagnosis|
+|pos_tasa|Tasa.positivos|Positive cases rate|
+|n_mues|No..de.muestras.tomadas|Number of tests taken|
+|test_diag|Tests.con.diagnóstico|Number of tests taken with diagnosis|
 |pos|Positivos|Positive cases|
-|por_inf|Porcentaje.infectados.por.día|Percent of infected people in a day|
+|por_pos|Porcentaje.positivos.por.día|Percent of infected people in a day|
 |cont|Cont|Infected|
-|por_pob|X.|Percent of population infected|
+|por_pob|Porcentaje de la población infectada|Percent of population infected|
 |n_est|No..esimado.f|Estimated number of infected people|
-|fallecidos_nue|Nuevos.fallecidos|New deaths|
+|fallecidos|Fallecidos.diarios|Deaths per day|
+|neg|Negativos|Negative cases|
+|fallecidos_test|Fallecidos.con.test.1|Deaths with tests performed|
+|fallecidos_prob|Fallecidos.probables|Probable number of deaths|
+|test_diag_pmill|test.con.diagnóstico.por.millón|Number of tests taken with diagnosis per million|
+|n_mues_pmill|No..muestras.tomadas.por.millón|Number of tests taken per million|
+|n_mues_sres|No..de.muestras.tomadas.sin.resulado|Number of tests taken without diagnosis|
 
 
 * Tabla: jh_ts_covid19_confirmed_ecu, jh_ts_covid19_deaths_ecu, jh_ts_covid19_recovered_ecu 
