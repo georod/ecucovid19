@@ -55,7 +55,7 @@ Hasta el momento existen estos datos en la bd,
   - Los datos de la tabla ecu_covid19 son inicialmente recopilados por Santiago Ron en [Google Sheets](https://docs.google.com/spreadsheets/d/1Gq06oasFB5K9893qbDV0dcXR6SX5ZCAZva_J6uSkmcE/edit#gid=0). Una copia actualizada de estos datos es almacenada en una base de datos (bd) relacional. 
   - Los datos de las tablas de John Hopkins CSSE son distribuidos libremente al público. Los datos disponibles en la bd han sido transformados para mostrar la fecha en una sola columna (tabla larga no ancha como la original). 
 
-Nota: los datos son actualizados cada dos días. En la carpeta data/archive encontrará versiones antiguas de los datos. Usualmente, los datos de esta carpeta tienen una estructura diferente de los actuales. Por ejemplo, puede ver nuevas variables o nuevos nombres de variables.
+Nota: los datos son actualizados cada dos días. En la carpeta data/archive encontrará versiones antiguas de los datos. Usualmente, los datos en la carpeta archive tienen una estructura diferente a los datos en carpeta data. Por ejemplo, la última versión de una table puede tener nuevas variables o nuevos nombres de variables.
 
 
 Abajo mostramos como usar los datos usando R.
@@ -161,6 +161,7 @@ R es un programa estadístico y computacional de fuente abierta (open-source sof
 |test_diag_pmill|test.con.diagnóstico.por.millón|Number of tests taken with diagnosis per million|
 |n_mues_pmill|No..muestras.tomadas.por.millón|Number of tests taken per million|
 |n_mues_sres|No..de.muestras.tomadas.sin.resulado|Number of tests taken without diagnosis|
+|fallecidos_reg_civil|Fallecimientos.registro.civil|Civil Registry deaths|
 
 
 * Tabla: jh_ts_covid19_confirmed_ecu, jh_ts_covid19_deaths_ecu, jh_ts_covid19_recovered_ecu 
