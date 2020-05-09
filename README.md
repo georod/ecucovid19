@@ -1,5 +1,7 @@
 # Coronavirus 2019 (COVID-19) Ecuador
 
+**NOTA**: Dado los cambios e inconsistencias en la generación de datos por parte del Gobierno del Ecuador (apartir del 24 de abril de 2020 principalmente), ya no se actualizará los mismos en este repositorio. Esto afecta los datos de Santiago Ron que he venido distribuyendo aquí. Los datos de John Hopinks CSEE se actualizarán una vez por semana (sábado).
+
 -   [Introducción](#introducción)
 -	[Cómo usar este repositorio](#cómo-usar-este-repositorio)
 	-   [Usar los datos con R](#usar-los-datos-con-R)
@@ -19,9 +21,7 @@ Este repositorio contiene datos sobre Coronavirus (Covid-19) del Ecuador de vari
 <b>Otras iniciativas similares:</b><br>
 
 * [Andres N. Robalino](https://github.com/andrab/ecuacovid), @andras_io: Proporciona en GitHub muertes y casos positivos de los informes del Servicio Nacional de Gestión de Riesgos y Emergencias del Ecuador (SNGRE). Andrés proporciona datos crudos y con código de INEC provincial/cantonal. Excelente trabjo Andrés.
-* [Pablo Reyes](https://github.com/pablora19/COVID19_EC), @PabloRA19: Proporciona en GitHub varias tablas importantes. Sus fuentes son la SNGRE (@riesgos_ec) pero con algunas correcciones importantes. (Ver cuenta de Pablo en Twitter.) 
-
-Por otro lado, Ugo Rivera (@ugo_r_b): compartió por Twitter un archivo [Google Sheets](https://docs.google.com/spreadsheets/d/1ZTXvIqq23cnmN-A8Fikyo6C_6jI3xYPE1Mff9fZOgHc/edit#gid=0) que parecer ser de la SNGRE. Este archivo tiene tablas similares a las de Pablo Reyes.
+* [Pablo Reyes](https://github.com/pablora19/COVID19_EC), @PabloRA19: Proporciona en GitHub varias tablas importantes. Sus fuentes son la SNGRE (@riesgos_ec) pero con algunas correcciones importantes. (Ver cuenta de Pablo en Twitter.) Estos datos también se encuentran aquí [Google Sheets](https://docs.google.com/spreadsheets/d/1ZTXvIqq23cnmN-A8Fikyo6C_6jI3xYPE1Mff9fZOgHc/edit#gid=0).
 
 <br>
 
