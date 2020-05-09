@@ -181,6 +181,7 @@ R es un programa estadístico y computacional de fuente abierta (open-source sof
 
 ### Mapas interactivos
 * [Días con fallecidos por COVID-19](https://georod.carto.com/builder/0e64800d-4993-4083-b65a-2ca5f45cf30c/embed): Con datos de [Andres N. Robalino](https://github.com/andrab/ecuacovid) se creó un mapa espacio-temporal que muestra días con fallecidos por provincia. Los puntos representan provincias (sus capitales) donde hubo más de 3 fallecidos a causa del COVID-19 en un día.  Este mapa permite ver la distribución geográfica y temporal de las muertes por COVID-19 en el Ecuador.  Se usó la plataforma [Carto](https://carto.com/) para crear este mapa.
+* [Tasa de casos positivos de COVID-19 por cantón y tasa de letalidad de COVId-19 por provincia ](https://georod.carto.com/builder/d4e7d780-741e-46b2-9cc8-7903a0aa4f24/embed): Con datos de [Andres N. Robalino](https://github.com/andrab/ecuacovid) creé un  webmap interactivo con dos capas. La primera capa muestra un mapa coroplético con la tasa de casos positivos por cantón. La segunda capa, presenta un mapa coroplético con la tasa de letalidad de COVID-19 por provincia. Se usó la plataforma [Carto](https://carto.com/) para crear estos mapas interactivos.
 
 
 ## Términos de Uso
