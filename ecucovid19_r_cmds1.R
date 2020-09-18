@@ -1,12 +1,12 @@
  #Solo se necesita instalar las librerias una vez
   install.packages("DBI")
-  install.packages("RPostgreSQL") # opcional
+  install.packages("RPostgres") 
   
   # Cargar librería
   library(DBI)
-  library(RPostgreSQL) # opcional
+  library(RPostgres)
   
-  # crear conección a la bd
+  # crear conección a la bd 
   con <- DBI::dbConnect(drv = RPostgres::Postgres(),user='georodco_pubu',password='Covid19Ecuador',host='66.198.240.224',port=5432,dbname='georodco_covid19')
 
   # pedir a la bd la tabla ecu_covid19
