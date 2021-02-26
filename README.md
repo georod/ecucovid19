@@ -35,13 +35,13 @@ Este repositorio contiene datos sobre Coronavirus (Covid-19) del Ecuador de vari
 
 Los datos presentados aquí se pueden acceder por dos métodos. Primero, usuarios pueden conectarse directamente a la base de datos relacional ([PostgreSQL](https://www.postgresql.org/)) usando cualquier programa estadístico (R, Stata, Excel, etc.) Segundo, pueden descargar los datos en formato CSV dando un click en los archivos que se encuentran en la carperta <b>data</b> arriba.
 
-Los parámetros para a la bd conectarse son:
+Los parámetros para a la bd conectarse son (Si deaseas un login por favor contáctme):
 
-  - IP: 66.198.240.224
-  - Puerto: 5432
+  - IP: 
+  - Puerto: 
   - Base de datos: georodco_covid19
-  - Usuario: georodco_pubu
-  - Clave: Covid19Ecuador
+  - Usuario: 
+  - Clave: 
   
 Hasta el momento existen estos datos en la bd,
 
@@ -78,8 +78,8 @@ R es un programa estadístico y computacional de fuente abierta (open-source sof
 
 * Connectarse a (y desconectarse de) la bd
     
-		# crear conección a la bd
-        con <- DBI::dbConnect(drv = RPostgres::Postgres(),user='georodco_pubu',password='Covid19Ecuador',host='66.198.240.224',port=5432,dbname='georodco_covid19')
+		# crear conección a la bd (Si deaseas un login por favor contáctme)
+        con <- DBI::dbConnect("PostgreSQL", user='', password='',host='', port=, dbname='')
 
 		# pedir a la bd la tabla ecu_covid19
 		res <- dbSendQuery(con, "SELECT * FROM ecu_covid19")
